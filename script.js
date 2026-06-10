@@ -9,14 +9,14 @@ const bird = {
   y: height / 2,
   radius: 16,
   velocity: 0,
-  gravity: 0.175,
-  jumpHeight: -5,
+  gravity: 0.15,
+  jumpHeight: -7,
 };
 
 const pipeWidth = 72;
-const pipeGap = 280;
-const pipeSpeed = 1.5;
-const pipeInterval = 2000;
+const pipeGap = 260;
+const pipeSpeed = 1.3;
+const pipeInterval = 2800;
 
 let pipes = [];
 let lastPipeTime = -Infinity;
