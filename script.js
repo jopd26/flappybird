@@ -9,14 +9,14 @@ const bird = {
   y: height / 2,
   radius: 16,
   velocity: 0,
-  gravity: 0.65,
-  jumpHeight: -11,
+  gravity: 0.55,
+  jumpHeight: -10,
 };
 
 const pipeWidth = 72;
 const pipeGap = 170;
-const pipeSpeed = 2.3;
-const pipeInterval = 1800;
+const pipeSpeed = 1.9;
+const pipeInterval = 1900;
 
 let pipes = [];
 let lastPipeTime = 0;
@@ -81,7 +81,7 @@ function drawScore() {
 }
 
 function drawOverlay() {
-  if (!started) {
+  if (!started && !gameOver) {
     ctx.fillStyle = 'rgba(0,0,0,0.35)';
     ctx.fillRect(0, 0, width, height);
     ctx.fillStyle = '#ffffff';
@@ -96,7 +96,7 @@ function drawOverlay() {
     ctx.font = '700 32px Inter, sans-serif';
     ctx.fillText('Game Over', width / 2, height / 2 - 18);
     ctx.font = '500 20px Inter, sans-serif';
-    ctx.fillText('Reload the page to try again', width / 2, height / 2 + 24);
+    ctx.fillText('Click or Space to restart', width / 2, height / 2 + 24);
   }
 }
 
@@ -153,7 +153,13 @@ function loop(timestamp) {
 }
 
 function flap() {
-  if (gameOver) return;
+  if (gameOver) {
+    resetGame();
+    started = true;
+    bird.velocity = bird.jumpHeight;
+    return;
+  }
+
   started = true;
   bird.velocity = bird.jumpHeight;
 }
