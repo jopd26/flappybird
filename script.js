@@ -14,7 +14,7 @@ const bird = {
 };
 
 const pipeWidth = 72;
-const pipeGap = 180;
+const pipeGap = 220;
 const pipeSpeed = 1.5;
 const pipeInterval = 2000;
 
@@ -37,7 +37,7 @@ function resetGame() {
 }
 
 function createPipe() {
-  const topHeight = 100 + Math.random() * 180;
+  const topHeight = 120 + Math.random() * 160;
   pipes.push({ x: width, topHeight, passed: false });
 }
 
