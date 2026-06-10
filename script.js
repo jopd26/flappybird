@@ -19,7 +19,7 @@ const pipeSpeed = 1.5;
 const pipeInterval = 2000;
 
 let pipes = [];
-let lastPipeTime = 0;
+let lastPipeTime = -Infinity;
 let score = 0;
 let bestScore = 0;
 let gameOver = false;
@@ -28,7 +28,7 @@ let lastTime = 0;
 
 function resetGame() {
   pipes = [];
-  lastPipeTime = 0;
+  lastPipeTime = performance.now();
   score = 0;
   bird.y = height / 2;
   bird.velocity = 0;
@@ -37,7 +37,7 @@ function resetGame() {
 }
 
 function createPipe() {
-  const topHeight = 80 + Math.random() * 220;
+  const topHeight = 100 + Math.random() * 180;
   pipes.push({ x: width, topHeight, passed: false });
 }
 
