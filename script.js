@@ -9,8 +9,8 @@ const bird = {
   y: height / 2,
   radius: 16,
   velocity: 0,
-  gravity: 0.35,
-  jumpHeight: -8,
+  gravity: 0.175,
+  jumpHeight: -16,
 };
 
 const pipeWidth = 72;
