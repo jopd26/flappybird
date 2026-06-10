@@ -14,9 +14,9 @@ const bird = {
 };
 
 const pipeWidth = 72;
-const pipeGap = 170;
-const pipeSpeed = 1.9;
-const pipeInterval = 1900;
+const pipeGap = 180;
+const pipeSpeed = 1.5;
+const pipeInterval = 2000;
 
 let pipes = [];
 let lastPipeTime = 0;
@@ -96,7 +96,7 @@ function drawOverlay() {
     ctx.font = '700 32px Inter, sans-serif';
     ctx.fillText('Game Over', width / 2, height / 2 - 18);
     ctx.font = '500 20px Inter, sans-serif';
-    ctx.fillText('Click or Space to restart', width / 2, height / 2 + 24);
+    ctx.fillText('Press Space or Restart', width / 2, height / 2 + 24);
   }
 }
 
@@ -164,7 +164,10 @@ function flap() {
   bird.velocity = bird.jumpHeight;
 }
 
+const restartButton = document.getElementById('restartButton');
+
 canvas.addEventListener('click', () => flap());
+restartButton.addEventListener('click', () => flap());
 window.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {
     event.preventDefault();

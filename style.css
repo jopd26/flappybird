@@ -39,6 +39,29 @@ canvas {
   background: #7dd1ff;
 }
 
+.controls {
+  margin: 16px auto 0;
+  max-width: 360px;
+}
+
+button#restartButton {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1f5d17;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+button#restartButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
 .instructions {
   margin-top: 14px;
   opacity: 0.88;
