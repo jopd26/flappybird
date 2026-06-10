@@ -9,8 +9,8 @@ const bird = {
   y: height / 2,
   radius: 16,
   velocity: 0,
-  gravity: 0.55,
-  jumpHeight: -10,
+  gravity: 0.35,
+  jumpHeight: -8,
 };
 
 const pipeWidth = 72;
@@ -164,10 +164,7 @@ function flap() {
   bird.velocity = bird.jumpHeight;
 }
 
-const restartButton = document.getElementById('restartButton');
-
 canvas.addEventListener('click', () => flap());
-restartButton.addEventListener('click', () => flap());
 window.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {
     event.preventDefault();
