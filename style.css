@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: linear-gradient(180deg, #4fc3f7 0%, #1a78c2 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.hint {
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+canvas {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 18px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35);
+  background: #7dd1ff;
+}
+
+.instructions {
+  margin-top: 14px;
+  opacity: 0.88;
+  font-size: 0.95rem;
+}
