@@ -14,7 +14,7 @@ const bird = {
 };
 
 const pipeWidth = 72;
-const pipeGap = 220;
+const pipeGap = 280;
 const pipeSpeed = 1.5;
 const pipeInterval = 2000;
 
